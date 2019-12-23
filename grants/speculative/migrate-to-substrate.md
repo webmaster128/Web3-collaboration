@@ -136,3 +136,27 @@ that explains the motivation as well as the feasibility of the implementation.
 - Support for hardware wallets
 - Partial claims of the available tokens
 - Production quality user interfaces
+
+### Similar projects
+
+#### Polkadot Claims
+
+The right to receive DOTs or KSMs (the Kusama testing DOTs) is granted by
+participating in the Polkadot ICO that was done on Ethereum.
+
+For pre-genesis DOT claims, there is an
+[Ethereum smart contract](https://github.com/w3f/polkadot-claims) you interact
+with to publish your Polkadot address with an proof of ownership. This works
+well because the source system (Ethereum) is a smart contracting platform. In
+contrast to Polkadot Claims, this grant application does not require the source
+system to perform custom operations for the claim. It could even be chain that
+stopped at the point of the migration.
+
+For post-genesis claims, there is the
+[Claims runtime module](https://github.com/paritytech/polkadot/blob/v0.7.10/runtime/src/claims.rs#L17),
+which is very similar to what this grant application wants to achieve. The main
+difference is that the source system is fixed to Ethereum and cannot easily be
+changed to a different verification algorithm. The module relies on unsigned
+transactions that don't pay fees, which is a simple solution for the
+chicken-egg-problem. However, it might create a potential for spam, which needs
+to be carefully analyzed.
