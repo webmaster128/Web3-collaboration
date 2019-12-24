@@ -146,10 +146,10 @@ participating in the Polkadot ICO that was done on Ethereum.
 
 For pre-genesis DOT claims, there is an
 [Ethereum smart contract](https://github.com/w3f/polkadot-claims) you interact
-with to publish your Polkadot address with an proof of ownership. This works
-well because the source system (Ethereum) is a smart contracting platform. In
+with to publish your Polkadot address with a proof of ownership. This works well
+because the source system (Ethereum) is a smart contracting platform. In
 contrast to Polkadot Claims, this grant application does not require the source
-system to perform custom operations for the claim. It could even be chain that
+system to perform custom operations for the claim. It could even be a chain that
 stopped at the point of the migration.
 
 For post-genesis claims, there is the
